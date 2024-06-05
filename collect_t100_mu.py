@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import re
+import os
 
 with open("data/t100.json") as f:
     t100_data = json.load(f)
@@ -32,14 +33,21 @@ def get_recent_matches(player_id, char_id):
                     match = re.findall(r"href=\"/player/(.+?)/(..)\"", str(i))
 
                     if match:
-                        matches.append((match[0][0], match[0][1], tuple(int(i) for i in list(i.children)[15].text.split("-"))))
+                        matches.append(
+                            (match[0][0], match[0][1], tuple(int(i) for i in list(i.children)[15].text.split("-"))))
 
             offset += 1
 
     return matches
 
 
+collected = [i[:-5] for i in os.listdir("data/matches")]
+skip = []
+
 for i in t100_data:
+    if i in collected or i in skip:
+        continue
+
     all_matches = []
 
     for j, k in enumerate(t100_data[i]):
@@ -49,6 +57,3 @@ for i in t100_data:
 
     with open(f"data/matches/{i}.json", "w") as f:
         json.dump(all_matches, f)
-
-
-
