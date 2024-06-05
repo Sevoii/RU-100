@@ -42,10 +42,11 @@ def get_recent_matches(player_id, char_id):
 
 
 collected = [i[:-5] for i in os.listdir("data/matches")]
-skip = []
+blacklist = []
+whitelist = []
 
 for i in t100_data:
-    if i in collected or i in skip:
+    if i in collected or i in blacklist or (whitelist and i not in whitelist):
         continue
 
     all_matches = []
