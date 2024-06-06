@@ -78,3 +78,6 @@ Another point to make is that RU (I will refer to Puddle as RU since it's easier
 
 More specific to this tier list, I'm guessing (but it's highly likely) that OP used the 'adjusted' win %. This only further muddles the (already) kinda shitty data which clouds the view even further. Another thing to note is that in an ideal world, the 'ideal' win % should all be sitting at 50% since (assuming all players have equal skill level) better characters would let players with a better skill level be at a higher rating. Judging by RU's MU chart, this is clearly not the case. Thus, it'd honestly be better to not adjust at all and use other methods to compensate. Finally, one other thing is that OP uses the standard distributions in their analysis. This fundamentally assumes that the W/L is normal-ish, which could very well not be the case! In my analysis, we use bootstrapping which completely bypasses this issue. 
 
+## Final Thing
+
+FINAL thing to note is that most win/loss rates for every character is between 45-55% (in general). It literally doesn't matter what character you play!! Just start playing and stop blaming your character :))))
