@@ -4,9 +4,9 @@ from collections import defaultdict
 
 # blacklist = ["SL", "AB"]
 #
-# with open("data/bootstrap_ci.json") as f:
-#     data = json.load(f)
-#
+with open("data/bootstrap_ci.json") as f:
+    data = json.load(f)
+
 # with open("data/bootstrap_ci.csv", "w", newline='') as f:
 #     writer = csv.writer(f)
 #     writer.writerow(["Character", "Median_Win_Rate"])
@@ -26,4 +26,4 @@ with open("data/kmeans_win_rate.csv") as f:
         groups[row[2]][0].append(row[0])
         groups[row[2]][1] = row[1]
 
-print(sorted(list(groups.values()), key=lambda x: x[1], reverse=True))
+print([sorted(i[0], key=lambda x: data[x][1]) for i in sorted(list(groups.values()), key=lambda x: x[1], reverse=True)])
