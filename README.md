@@ -1,5 +1,7 @@
 # The Best (not) Objective (not) GGST Tier List :3
 
+Special Note: Thank you Maria for helping out with the data collection process. You sped this project up by like an hour or so. 
+
 Buckle up boys and girls and we're going in for a journey for why these stats really aren't a good way to make Tier Lists!
 
 So I saw that [one post on reddit](https://www.reddit.com/r/Guiltygear/comments/1d8yhdh/tier_list_using_puddlefarm_top_1000_data_s_is_for/) and I was like, damn that sounds so
